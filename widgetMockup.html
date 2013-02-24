@@ -1,61 +1,85 @@
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="bootstrap 2/css/bootstrap.min.css">
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="bootstrap 2/js/bootstrap.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script type='text/javascript'>
+			var tabContainers = {};
+			tabContainers['RateCard'] = '#consultrRateCard';
+			tabContainers['About Me'] = '#consultrAboutMe';
+			tabContainers['Contact'] = '#consultrContact';
 			$(document).ready(function () {
 				$('.rateItem').popover({ animation: true, trigger: 'hover', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt vehicula iaculis. Cras dolor elit, semper vitae malesuada pharetra, mollis at nibh. Aenean dui lectus, pellentesque quis malesuada ut, commodo vel dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum erat in massa imperdiet ut placerat augue suscipit. Maecenas gravida 	 ", delay: {show: 1000, hide: 0}, placement: 'bottom'});
+				$('.consultrTabItem').click(function ()  {
+					$(tabContainers[$('.active').text()]).addClass('consultrInvisible');
+					$('.active').removeClass('active');
+					$(this).addClass('active');
+					$(tabContainers[$(this).text()]).removeClass('consultrInvisible');
+				});
+
 			});
+			
 		</script>
 	</head>
 	<body>
 		<div>
 			<div id="consultrContainer">
-				<div class='thumbnail' id='consultrHeader'>
-					<a href="#" alt="">
-						<img id="profilePhoto" src="https://www.counsyl.com/site_media/img/content/balaji-s-srinivasan.jpg" width="30px" height="30px">
-						</img>
-					</a>
-					<h6 id="consultrName">Balaji Srinvisian</h6>
-				</div>
-				<div id="consultrRankCard">
-					<div class="rateItem" ><div class="consultrItemDescription">Resume Evaluation</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$50</button>
-						</div>
+					<div id="consultrTabs">
+						<div class="consultrTabItem active" href="#">RateCard</div>
+						<div class="consultrTabItem" href="#">About Me</div>
+						<div class="consultrTabItem" href="#">Contact</div>
 					</div>
+				<div id="consultrRateCard">
+					<div class="rateItem" ><div class="consultrItemDescription">Resume Evaluation</div>
+							<button class="btn btn-success consultrBtn">$50</button>
+											</div>
 					<div class="rateItem" href="#"><div class="consultrItemDescription">Quick Email</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$100</button>
-						</div>
+							<button class="btn btn-success consultrBtn">$100</button>
 					</div>
 					<div class="rateItem" href="#"><div class="consultrItemDescription">Recruit Evaluation</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$200</button>
-						</div>
+							<button class="btn btn-success consultrBtn">$200</button>
 					</div>
 					<div class="rateItem" href="#"><div class="consultrItemDescription">Business Plan Evaluation</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$500</button>
-						</div>
+							<button class="btn btn-success consultrBtn">$500</button>
 					</div>
 					<div class="rateItem" href="#"><div class="consultrItemDescription">Per-Diem Consultation</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$3000</button>
-						</div>
+							<button class="btn btn-success consultrBtn">$3000</button>
 					</div>
 					<div class="rateItem" href="#"><div class="consultrItemDescription">Investment Evaluation</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$3000</button>
-						</div>
+							<button class="btn btn-success consultrBtn">$3000</button>
 					</div>
 					<div class="rateItem" href="#"><div class="consultrItemDescription">Advisory Board Membership</div>
-						<div class="consultrBtnContainer">
-							<button class="btn btn-mini btn-success">$30000</button>
-						</div>
+							<button class="btn btn-success consultrBtn">$30000</button>
 					</div>
+				</div>
+				<div id="consultrAboutMe" class="consultrInvisible">
+					<div id="consultrProfileHeader">
+						<img src="http://research.microsoft.com/en-us/groups/mldept/viola.jpg" id="consultrProfilePhoto"></img>
+						Daniel Haggerty
+					</div>
+					<h4>Header 1</h4>
+					<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+					<h4>Header 2</h4>
+					<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+					<h4>Header 3</h4>
+					<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+					<h4>Header 4</h4>
+					<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+				</div>
+				<div id="consultrContact" class="consultrInvisible">
+					<form>
+  						<fieldset>
+  							<legend> Daniel Haggerty</legend>
+    						<label>Name</label>
+      						<input type="text" id="inputName" placeholder="John Doe">
+    						<label>E-Mail</label>
+							<input type="text" id="inputEmail" placeholder="john@doe.com">
+  							<label>Message</label>
+        					<textarea rows="7" id="inputMessage"></textarea>
+    						<button type="submit" class="btn">Send</button>
+    					</fieldset>
+					</form>
 				</div>
 				<img src="img/consultrLogoPowered.png" id="consultrLogo"></img>
 			</div>

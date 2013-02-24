@@ -3,20 +3,19 @@
 }
 
 #consultrContainer {
-	width: 270px; 
+	width: 265px; 
 	height: 500px; 
-	margin: 0 auto;
+
 	border: 1px solid #aeadad;  
 	background-color: #cbcbcb; 
 	border-radius: 20px; 
-	position: absolute;
-
+	box-shadow: 0px 0px 15px 2px;
 	
 }
 
 #consultrHeader {
 	position: absolute;
-	width: 100%;
+	width: 265px;
 	height: 25%;
 	border-bottom: 1px solid #ddd;
 	background-color: #cbcbcb;
@@ -33,10 +32,9 @@
 	width: 77%;
 }
 
-#profilePhoto {
-	border-top-left-radius: 20px;
+#consultrProfilePhoto {
 	border-right: 1px solid #ddd;
-	height: 42px;
+	height: 70px;
 	display: inline-block;
 
 }
@@ -55,7 +53,6 @@
 }
 
 #consultrRateCard {
-	display: block;
 	width:100%;  
 	height: 84%; 
 	background-color: #f2f2f2; 
@@ -101,16 +98,16 @@
 }
 
 #consultrAboutMe {
-	width: 100%;
-	height: 50%;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-	position: relative;
-	background-color: white;
+	width:249px;  
+	height: 404px; 
+	background-color: #f2f2f2; 
+	overflow: scroll;
+	margin-top: 40px;
+	padding: 8px;
 }
 
 #consultrTabs {
-	width: 100%;
+	width: 265px;
 	background-color: #cbcbcb;
 	position: absolute;
 	top: 0;
@@ -132,5 +129,35 @@
 	cursor: pointer;
 
 }
+
+#consultrContact {
+	width:215px;  
+	height: 370px; 
+	background-color: #f2f2f2; 
+	overflow: scroll;
+	margin-top: 40px;
+	padding: 25px;
+}
+
+.consultrInvisible {
+	display: none;
+}
+
+#consultrProfileHeader {
+	border: 1px solid #ddd;
+	font-weight: bold;
+	font-size: 20px;
+	background-image: url('img/consultrBGPattern.png');
+}
+
+#consultrProfileTitle {
+	position: absolute;
+	display: inline-block;
+	width: 179px;
+	margin-top: 20px;
+	margin-left: 8px;
+
+}
+
 
 
