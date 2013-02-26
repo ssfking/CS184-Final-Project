@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style2.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			var tabContainers = {};
+			tabContainers['RateCard'] = '#consultrRateCard';
+			tabContainers['About Me'] = '#consultrAboutMe';
+			tabContainers['Contact'] = '#consultrContact';
+			$(document).ready(function () {
+				$('.rateItem').popover({ animation: true, html: true, trigger: 'hover', content: "<div class='consultrPopover'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt vehicula iaculis. Cras dolor elit, semper vitae malesuada pharetra, mollis at nibh. Aenean dui lectus, pellentesque quis malesuada ut, commodo vel dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum erat in massa imperdiet ut placerat augue suscipit. Maecenas gravida<div>", delay: {show: 1000, hide: 0}, placement: 'right'});
+				$('.consultrTabItem').click(function ()  {
+					$(tabContainers[$('.active').text()]).addClass('consultrInvisible');
+					$('.active').removeClass('active');
+					$(this).addClass('active');
+					$(tabContainers[$(this).text()]).removeClass('consultrInvisible');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<center>
+			<br>
+			<div id="consultrContainer">
+				<div id="consultrHeader">
+					<div id="consultrProfileHeader">
+						<img src="http://research.microsoft.com/en-us/groups/mldept/viola.jpg" id="consultrProfilePhoto"></img>
+						Daniel Haggerty
+					</div>
+				</div>
+				<div id="consultrTabPane">
+					<div class="consultrTabItem active" href="#">RateCard</div>
+					<div class="consultrTabItem" href="#">About Me</div>
+					<div class="consultrTabItem" href="#">Contact</div>
+				</div>
+				<div id="consultrContentContainer">
+					<div id="consultrRateCard">
+						<div class="rateItem" ><div class="consultrItemDescription">Resume Evaluation</div>
+							<button class="btn btn-mini btn-success consultrBtn">$50</button>
+											</div>
+						<div class="rateItem" href="#"><div class="consultrItemDescription">Quick Email</div>
+							<button class="btn btn-mini btn-success consultrBtn">$100</button>
+						</div>
+						<div class="rateItem" href="#"><div class="consultrItemDescription">Recruit Evaluation</div>
+							<button class="btn btn-mini btn-success consultrBtn">$200</button>
+						</div>
+						<div class="rateItem" href="#"><div class="consultrItemDescription">Business Plan Evaluation</div>
+							<button class="btn btn-mini btn-success consultrBtn">$500</button>
+						</div>
+						<div class="rateItem" href="#"><div class="consultrItemDescription">Per-Diem Consultation</div>
+							<button class="btn btn-mini btn-success consultrBtn">$3000</button>
+						</div>
+						<div class="rateItem" href="#"><div class="consultrItemDescription">Investment Evaluation</div>
+							<button class="btn btn-mini btn-success consultrBtn">$3000</button>
+						</div>
+						<div class="rateItem" href="#"><div class="consultrItemDescription">Advisory Board Membership</div>
+							<button class="btn btn-mini btn-success consultrBtn">$30000</button>
+						</div>
+					</div>
+					<div id="consultrAboutMe" class="consultrInvisible">
+						<h6>Header 1</h6>
+						<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+						<h6>Header 2</h6>
+						<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+						<h6>Header 3</h6>
+						<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+						<h6>Header 4</h6>
+						<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sagittis augue. Aliquam erat volutpat. Aliquam vitae orci at sapien iaculis egestas. </p>
+					</div>
+					<div id="consultrContact" class="consultrInvisible">
+						<form>
+  							<fieldset>
+    							<label>Name</label>
+     							<input type="text" id="inputName" class="input-medium" placeholder="John Doe">
+   								<label>E-Mail</label>
+								<input type="text" id="inputEmail" class="input-medium" placeholder="john@doe.com">
+  								<label>Message</label>
+        						<textarea rows="3" class="input-medium" id="inputMessage"></textarea>
+    							<button type="submit" class="btn">Send</button>
+    						</fieldset>
+						</form>
+					</div>
+				</div>
+				<img src="img/consultrLogoPowered.png" id="consultrLogo"></img>
+			</div>
+		</center>
+	</body>
+
+</html>
