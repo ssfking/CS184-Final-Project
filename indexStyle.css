@@ -1,0 +1,43 @@
+body {
+	background-image: url('img/bgImage.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.transprHeader {
+	padding-top: 20px;
+	padding-bottom: 25px;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+.transprHeader h1, h3, p {
+		font-family: Futura;
+	text-align: center;
+	color: white;
+}
+
+.transprHeader h1 {
+	font-size: 60px;
+	margin-bottom: 20px;
+}
+
+.transprHeader p {
+	margin-top: 20px	;
+}
+
+#consultrContainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	box-shadow: 0px 0px 20px 5px rgba(255, 255, 190, .45);
+}
+
+.form-search {
+	margin-left: 23%;
+}
+
+#whiteHeader {
+	background-color: rgba(255, 255, 255, 1);
+}
