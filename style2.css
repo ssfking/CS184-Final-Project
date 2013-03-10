@@ -5,17 +5,18 @@
 	border: 1px solid #aeadad;  
 	background-color: #cbcbcb; 
 	border-radius: 20px;
-	margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
     text-align: left; 
     border: 1px solid #aeadad;
-    -webkit-box-shadow: 0px 0px 7px rgba(50, 50, 50, 0.79);
-	-moz-box-shadow: 0px 0px 7px rgba(50, 50, 50, 0.79);
-	box-shadow: 0px 0px 7px rgba(50, 50, 50, 0.39);
+}
+
+#consultrContainer h1, #consultrContainer h2, #consultrContainer h3, #consultrContainer h4, #consultrContainer h5, #consultrContainer h6, #consultrContainer p{
+	font-size: 100%;
+	font-family: Helvetica Neue;
+	color: black;
+	text-align: left;
 }
 
 #consultrHeader {
@@ -131,6 +132,7 @@
 	padding: 8px;
 	line-height: 150%;
 	font-size: 70%;
+
 }
 
 #consultrContact {

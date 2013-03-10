@@ -1,36 +1,36 @@
 body {
-	background-image: url('img/bgImage.jpg');
+	background-image: url('img/bgImage2.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 
-.transprHeader {
-	padding-top: 20px;
-	padding-bottom: 25px;
-	background-color: rgba(0, 0, 0, 0.85);
-}
-
-.transprHeader h1, h3, p {
-		font-family: Futura;
+.displayUnit h1, .displayUnit h3, .displayUnit p {
+	font-family: Futura;
 	text-align: center;
 	color: white;
 }
 
-.transprHeader h1 {
+.displayUnit h1 {
 	font-size: 60px;
 	margin-bottom: 20px;
 }
 
-.transprHeader p {
+.displayUnit p {
 	margin-top: 20px	;
+}
+
+.displayUnit > button {
+	margin-left: auto;	
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 
 #consultrContainer {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px;
+	margin-top: 15px;
 	box-shadow: 0px 0px 20px 5px rgba(255, 255, 190, .45);
 }
 
@@ -38,6 +38,24 @@ body {
 	margin-left: 23%;
 }
 
+#whiteFooter {
+	background-color: white;
+	width: 100%;
+	height: 65px;
+}
+
 #whiteHeader {
-	background-color: rgba(255, 255, 255, 1);
+	background-color: white;
+	width: 100%;
+	height: 65px;
+}
+
+.displayUnit {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	padding: 40px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
 }
